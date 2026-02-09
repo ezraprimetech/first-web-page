@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My First Web Page</title>
+    
+    <!-- Styles for fonts, buttons, and hover effects -->
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial, sans-serif;
+            text-align: center; /* Center everything */
+            padding-top: 50px; /* Space from top */
+        }
+
+        h1 {
+            color: darkblue;
+            font-size: 48px;
+            font-style: italic;
+        }
+
+        p {
+            color: black;
+            font-size: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            margin: 10px; /* Space between buttons */
+        }
+
+        button:hover {
+            transform: scale(1.1); /* Grows slightly */
+            opacity: 0.8;          /* Slightly transparent */
+        }
+
+        #message {
+            color: green;
+            font-size: 22px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My First Web Page</h1>
+    <p>This is my first time learning how to code 😎🎉</p>
+
+    <!-- Buttons -->
+    <button onclick="sayHello()">Click me 😃</button>
+    <button onclick="sayGoodbye()">Say Goodbye 👋</button>
+    <button onclick="askName()">Enter Your Name 📝</button>
+
+    <!-- Message display -->
+    <p id="message"></p>
+
+    <!-- JavaScript -->
+    <script>
+        function sayHello() {
+            document.getElementById("message").innerText = "Hello Nsikan! You clicked the button! 🌟";
+        }
+
+        function sayGoodbye() {
+            document.getElementById("message").innerText = "Goodbye Nsikan! See you next time! 💫";
+        }
+
+        function askName() {
+            let name = prompt("What's your name?");
+            if (name) {
+                document.getElementById("message").innerText = "Hello " + name + "! Welcome to my page! 🎉";
+            } else {
+                document.getElementById("message").innerText = "You didn't enter a name 😅";
+            }
+        }
+    </script>
+
+</body>
+</html>
